@@ -50,10 +50,9 @@ int main(void)
 	}
 	if (closestD == -1) {
 		printf("No more trains today.\n");
+	} else {
+		printf("Closest departure time is %02d:%02d, arriving at %02d:%02d.\n", (closestD/60), (closestD%60), (closestA/60), (closestA%60));
 	}
-
-
-	printf("Closest departure time is %02d:%02d, arriving at %02d:%02d.\n", (closestD/60), (closestD%60), (closestA/60), (closestA%60));
 
 	return 0;
 }
