@@ -25,7 +25,7 @@ int main(void)
 	for (i = count - 1; i >= 0; i--) {
         if (sentence[i] == ' ') {
            sentence[i] = '\0';
-		   printf("%s ", &(sentence[i]) + 1);
+	printf("%s ", &(sentence[i]) + 1);
         }
 	}
     printf("%s%c\n", sentence, endPunctuation);
