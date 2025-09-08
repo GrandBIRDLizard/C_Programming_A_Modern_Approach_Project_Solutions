@@ -4,11 +4,11 @@
 
 int main(void)
 {
-	char sentance[N];
+	char sentence[N];
 	char endPunctuation, in;
 	int i = 0;
 
-	printf("Enter a sentance: ");
+	printf("Enter a sentence: ");
 
 	int count = 0;
 	while ((in = getchar()) != '\n') {
@@ -16,19 +16,19 @@ int main(void)
 			endPunctuation = in;
 			break;
 		}
-		sentance[count] = in;
+		sentence[count] = in;
 		count++;
 		continue;
 	}
-	sentance[count] = '\0';
+	sentence[count] = '\0';
 
 	for (i = count - 1; i >= 0; i--) {
-        if (sentance[i] == ' ') {
-           sentance[i] = '\0';
-		   printf("%s ", &(sentance[i]) + 1);
+        if (sentence[i] == ' ') {
+           sentence[i] = '\0';
+		         printf("%s ", &(sentence[i]) + 1);
         }
 	}
-    printf("%s%c\n", sentance, endPunctuation);
+    printf("%s%c\n", sentence, endPunctuation);
 
 	return 0;
 }
